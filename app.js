@@ -36,7 +36,7 @@ const getJoke = async () => {
   const res = await fetch(JOKES_API_URL);
   const { setup, punchline } = await res.json();
   const setupInnerHTML = `<p class="setupCaret">${setup}</p>`;
-  const punchlineInnerHTML = `<p style="margin-top: 1rem;">${punchline}</p>`;
+  const punchlineInnerHTML = `<p style="margin-top: 1rem; width: min-content;">${punchline}</p>`;
   setupElement.innerHTML = setupInnerHTML;
   setTimeout(() => {
     document.querySelector(".setupCaret").style.borderRight = 0;
